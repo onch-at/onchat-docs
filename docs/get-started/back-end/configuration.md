@@ -4,85 +4,42 @@ sidebar_position: 2
 
 # 配置
 
-Let's translate `docs/intro.md` to French.
+本指南主要介绍了如何配置 OnChat 后端应用程序。
 
-## Configure i18n
+## 环境变量配置
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+OnChat 默认将**部分**主要的配置项抽离至到环境变量文件中配置，完整的配置请前往项目根目录下的 `config` 目录下查看，请根据实际情况修改对应的环境变量值。
 
-```js title="docusaurus.config.js"
-module.exports = {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
+### 前置步骤
 
-## Translate a doc
+进入 OnChat 后端应用程序项目根目录下，将 `example.env` 环境变量文件重命名为 `.env` 。
 
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
+### 默认环境变量介绍
 
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
-
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
-
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
-
-## Start your localized site
-
-Start your site on the French locale:
-
-```bash
-npm run start -- --locale fr
-```
-
-Your localized site is accessible at `http://localhost:3000/fr/` and the `Getting Started` page is translated.
-
-:::caution
-
-In development, you can only use one locale at a same time.
-
-:::
-
-## Add a Locale Dropdown
-
-To navigate seamlessly across languages, add a locale dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-module.exports = {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The locale dropdown now appears in your navbar:
-
-![Locale Dropdown](/img/tutorial/localeDropdown.png)
-
-## Build your localized site
-
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
-```
+| 分类 | 环境变量 | 数据类型 | 描述 |
+| - | - | - | - |
+|          | APP_DEBUG               | Boolean | 应用程序调试模式 |
+| APP      | DEFAULT_TIMEZONE        | String  | 应用程序所属时区，[详见 »](https://www.php.net/manual/zh/timezones.php) |
+| LANG     | DEFAULT_LANG            | String  | 应用程序语言，[详见 »](https://www.kancloud.cn/manual/thinkphp6_0/1037637) |
+| SERVER   | HOST                    | String  | OnChat 服务器地址 |
+| SERVER   | PORT                    | Integer | OnChat 端口 |
+| DATABASE | HOSTNAME                | String  | 数据库服务器地址 |
+| DATABASE | DATABASE                | String  | 数据库名称 |
+| DATABASE | USERNAME                | String  | 数据库用户名 |
+| DATABASE | PASSWORD                | String  | 数据库密码 |
+| DATABASE | HOSTPORT                | Integer | 数据库端口 |
+| REDIS    | HOST                    | String  | Redis 服务器地址 |
+| REDIS    | PORT                    | Integer | Redis 端口 |
+| REDIS    | PASSWORD                | String  | Redis 密码 |
+| REDIS    | DATABASE                | Integer | Redis 数据库号（dbindex） |
+| STORAGE  | DRIVER                  | String  | 默认文件储存驱动 |
+| OSS      | ACCESS_KEY_ID           | String  | OSS 账户 Access Key Id |
+| OSS      | ACCESS_KEY_SECRET       | String  | OSS 账户 Access Key Secret |
+| OSS      | ENDPOINT                | String  | OSS 地域节点（可填写已绑定的域名） |
+| OSS      | BUCKET                  | String  | OSS Bucket 名称 |
+| OSS      | IMG_STYLENAME_THUMBNAIL | String  | OSS 缩略图 图片样式名 |
+| SMTP     | HOST                    | String  | SMTP 服务器地址 |
+| SMTP     | PORT                    | Integer | SMTP 端口 |
+| SMTP     | SECURE                  | Boolean | SMTP 安全连接 |
+| SMTP     | USERNAME                | String  | SMTP 用户名 |
+| SMTP     | PASSWORD                | String  | SMTP 密码 |
