@@ -16,7 +16,7 @@ sidebar_position: 1
 - [Swoole](https://www.swoole.com/) 版本 >=4.4.8（您可使用 `php --ri swoole` 查看版本）。Swoole 是一个 PHP 的协程框架，提供了基于协程的并发库。
 - [PhpRedis](https://github.com/phpredis/phpredis) 版本 当前版（您可使用 `php --ri redis` 查看版本）。PhpRedis 是一个 PHP 扩展，提供了用于与 Redis 进行通信的 API。
 - [Imagick](https://github.com/Imagick/imagick) 版本 当前版（您可使用 `php --ri imagick` 查看版本）。Imagick 是一个 PHP 扩展，可以使用 ImageMagick 库创建和修改图像。
-- [MySQL](https://www.mysql.com/) 版本 >=5.7.0（您可使用 `mysql -V` 查看版本）。MySQL 是一个开放源码的关系数据库管理系统。
+- [MySQL](https://www.mysql.com/) 版本 >=5.7.0（您可使用 `mysql -V` 查看版本）。MySQL 是一个开源的关系数据库管理系统。
 - [Redis](https://redis.io/) 版本 >=5.0.0（您可使用 `redis-cli -v` 查看版本）。Redis 是一个开源的内存数据结构存储，用作数据库，缓存和消息代理。
 - [FFmpeg](https://www.ffmpeg.org/) 版本 当前版（您可使用 `ffmpeg -version` 查看版本）。FFmpeg 是一个用于处理多媒体内容的库和工具的集合。
 
@@ -43,19 +43,3 @@ OnChat 虽然支持文件本地存储功能，但推荐使用第三方对象存�
 ```bash
 git clone https://github.com/HyperLife1119/OnChat
 ```
-
-## 创建数据库
-
-如果你还未拥有数据库，请登入 MySQL，并在其命令窗口下输入如下命令：
-
-```sql
-CREATE DATABASE IF NOT EXISTS onchat DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
-```
-
-:::caution
-如果你没有权限创建数据库或已经拥有一个数据库，请确保你的数据库字符集为 `utf8mb4`。
-:::
-
-:::info
-上述命令中，`onchat` 为数据库名称，允许自行更改替换，教程中数据库名称将以 `onchat` 为例。
-:::

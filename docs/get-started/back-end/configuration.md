@@ -90,6 +90,10 @@ USERNAME = STMPUsername
 PASSWORD = SMTPPassword
 ```
 
+## 数据库配置
+
+如果你没有权限创建数据库或已经拥有一个数据库，请确保你的数据库字符集为 `utf8mb4`。
+
 ## 阿里云对象存储服务（OSS）配置
 
 对于 `阿里云对象存储服务（OSS）`，这是一项可选服务。
