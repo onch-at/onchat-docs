@@ -81,6 +81,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} HyperGo!, Inc. Built with Docusaurus.`,
     },
+    prism: {
+      additionalLanguages: ['php'],
+    },
     hideableSidebar: true
   },
   presets: [

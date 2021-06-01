@@ -4,6 +4,8 @@ sidebar_position: 4
 
 # 高级
 
+本指南主要介绍了 OnChat 后端应用程序的一些高级用法。
+
 ## 自定义存储驱动
 
 如果需要自定义存储驱动，你的驱动类必须实现 `app\contract\StorageDriver` 接口，包含了以下方法：
@@ -79,9 +81,9 @@ interface StorageDriver
 - `getUrl` 方法用于获取URL。
 - `getThumbnailUrl` 方法获取缩略图URL。
 
-假设你的自定义驱动类名为 `Custom` ，请修改 `config/storage.php` 配置文件，并添加以下配置：
+1. 假设你的自定义驱动类名为 `Custom` ，请修改 `config/storage.php` 配置文件，并添加以下配置：
 
-```diff php
+```diff title="config/storage.php"
   return [
     'default' => env('storage.driver', 'oss'),
     'stores'  => [
@@ -94,9 +96,9 @@ interface StorageDriver
   ];
 ```
 
-然后打开 `.env` 环境变量文件，并修改以下变量：
+1. 然后打开 `.env` 环境变量文件，并修改以下变量：
 
-```diff
+```diff title=".env"
   [STORAGE]
 - DRIVER = oss
 + DRIVER = custom

@@ -13,6 +13,7 @@ sidebar_position: 1
 ### 软件与环境
 
 - [PHP](https://www.php.net/) 版本 >=7.1.0（您可使用 `php -v` 查看版本）。PHP 是一种流行的通用脚本语言，特别适合于 Web 开发。
+- [Composer](https://getcomposer.org/) 版本 >= 2.0.0（您可使用 `composer -V` 查看版本）。Composer 是 PHP 的依赖管理器。
 - [Swoole](https://www.swoole.com/) 版本 >=4.4.8（您可使用 `php --ri swoole` 查看版本）。Swoole 是一个 PHP 的协程框架，提供了基于协程的并发库。
 - [PhpRedis](https://github.com/phpredis/phpredis) 版本 当前版（您可使用 `php --ri redis` 查看版本）。PhpRedis 是一个 PHP 扩展，提供了用于与 Redis 进行通信的 API。
 - [Imagick](https://github.com/Imagick/imagick) 版本 当前版（您可使用 `php --ri imagick` 查看版本）。Imagick 是一个 PHP 扩展，可以使用 ImageMagick 库创建和修改图像。
@@ -38,8 +39,14 @@ OnChat 虽然支持文件本地存储功能，但推荐使用第三方对象存�
 
 ## 安装 OnChat
 
-您可以使用 GIT 工具克隆 OnChat 后端仓库到本地，请打开终端/控制台窗口，输入如下命令：
+1. 您可以使用 GIT 工具克隆 OnChat 后端仓库到本地，请打开终端/控制台窗口，输入如下命令：
 
-```bash
-git clone https://github.com/HyperLife1119/OnChat
-```
+  ```bash
+  git clone https://github.com/HyperLife1119/OnChat
+  ```
+
+1. 导航至 OnChat 后端应用程序项目根目录下并打开终端/控制台窗口，输入如下命令以安装项目所需依赖项：
+
+  ```bash
+  composer install
+  ```

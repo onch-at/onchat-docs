@@ -33,14 +33,14 @@ php think onchat [<动作>]
 
 ## 运行
 
-- 在 OnChat 项目根目录下打开终端/控制台窗口。
-- 如果是首次运行，你需要先执行 `php think onchat init` 命令以初始化 OnChat。
-- 执行 `php think onchat start` 命令， 启动 OnChat 应用程序。
-- 打开当前系统的 Web 浏览器，并访问 `http://127.0.0.1:9501` 。
+1. 导航至 OnChat 后端应用程序项目根目录下并打开终端/控制台窗口。
+1. 如果是首次运行，你需要先执行 `php think onchat init` 命令以初始化 OnChat。
+1. 执行 `php think onchat start` 命令， 启动 OnChat 应用程序。
+1. 打开当前系统的 Web 浏览器，并访问 `http://127.0.0.1:9501` 。
   :::tip
   上述 URL 中的 `9501` 为 OnChat 后端应用程序的端口，教程中 OnChat 后端应用程序端口将以 `9501` 为例。
   :::
-- 如果你的安装和环境搭建成功了，就会在浏览器中看到如下内容：
+1. 如果你的安装和环境搭建成功了，就会在浏览器中看到如下内容：
 
   ```txt
   Running
