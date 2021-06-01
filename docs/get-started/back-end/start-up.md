@@ -24,6 +24,7 @@ php think onchat [<动作>]
 
 | 动作 | 示例 | 描述 |
 | - | - | - |
+|         | `php think onchat`         | 启动 OnChat 应用程序 |
 | start   | `php think onchat start`   | 启动 OnChat 应用程序 |
 | restart | `php think onchat restart` | 重启 OnChat 应用程序 |
 | reload  | `php think onchat reload`  | 热重载 OnChat 应用程序 |
