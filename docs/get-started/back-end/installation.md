@@ -12,14 +12,23 @@ sidebar_position: 1
 
 ### 软件与环境
 
-- [PHP](https://www.php.net/) 版本 >=7.1.0（您可使用 `php -v` 查看版本）。PHP 是一种流行的通用脚本语言，特别适合于 Web 开发。
-- [Composer](https://getcomposer.org/) 版本 >= 2.0.0（您可使用 `composer -V` 查看版本）。Composer 是 PHP 的依赖管理器。
-- [Swoole](https://www.swoole.com/) 版本 >=4.4.8（您可使用 `php --ri swoole` 查看版本）。Swoole 是一个 PHP 的协程框架，提供了基于协程的并发库。
-- [PhpRedis](https://github.com/phpredis/phpredis) 版本 当前版（您可使用 `php --ri redis` 查看版本）。PhpRedis 是一个 PHP 扩展，提供了用于与 Redis 进行通信的 API。
-- [Imagick](https://github.com/Imagick/imagick) 版本 当前版（您可使用 `php --ri imagick` 查看版本）。Imagick 是一个 PHP 扩展，可以使用 ImageMagick 库创建和修改图像。
-- [MySQL](https://www.mysql.com/) 版本 >=5.7.0（您可使用 `mysql -V` 查看版本）。MySQL 是一个开源的关系数据库管理系统。
-- [Redis](https://redis.io/) 版本 >=5.0.0（您可使用 `redis-cli -v` 查看版本）。Redis 是一个开源的内存数据结构存储，用作数据库，缓存和消息代理。
-- [FFmpeg](https://www.ffmpeg.org/) 版本 当前版（您可使用 `ffmpeg -version` 查看版本）。FFmpeg 是一个用于处理多媒体内容的库和工具的集合。
+- [PHP](https://www.php.net/) 版本 >=7.1.0（使用 `php -v` 查看版本）。PHP 是一种流行的通用脚本语言，特别适合于 Web 开发。
+- [Composer](https://getcomposer.org/) 版本 >= 2.0.0（使用 `composer -V` 查看版本）。Composer 是 PHP 的依赖管理器。
+- [Swoole](https://www.swoole.com/) 版本 >=4.5.0（使用 `php --ri swoole` 查看版本）。Swoole 是一个 PHP 的协程框架，提供了基于协程的并发库。
+- [PhpRedis](https://github.com/phpredis/phpredis) 版本 当前版（使用 `php --ri redis` 查看版本）。PhpRedis 是一个 PHP 扩展，提供了用于与 Redis 进行通信的 API。
+- [Imagick](https://github.com/Imagick/imagick) 版本 当前版（使用 `php --ri imagick` 查看版本）。Imagick 是一个 PHP 扩展，可以使用 ImageMagick 库创建和修改图像。
+- [MySQL](https://www.mysql.com/) 版本 >=5.7.0（使用 `mysql -V` 查看版本）。MySQL 是一个开源的关系数据库管理系统。
+- [Redis](https://redis.io/) 版本 >=5.0.0（使用 `redis-cli -v` 查看版本）。Redis 是一个开源的内存数据结构存储，用作数据库，缓存和消息代理。
+- [FFmpeg](https://www.ffmpeg.org/) 版本 当前版（使用 `ffmpeg -version` 查看版本）。FFmpeg 是一个用于处理多媒体内容的库和工具的集合。
+- [Supervisor](http://supervisord.org/) 版本 当前版（使用 `supervisorctl version` 查看版本）。Supervisor 是一个进程控制系统。
+
+:::info
+对于 Swoole，需要开启 `SWOOLE_HOOK_NATIVE_CURL`（使用 `php --ri swoole | grep curl-native` 查看是否开启）。若未开启，你需要重新编译 Swoole，编译时需开启 `--enable-swoole-curl` 选项，详见[官方文档 »](https://wiki.swoole.com/#/runtime?id=swoole_hook_native_curl)。
+:::
+
+:::tip
+对于 Supervisor，这是一个可替换软件。你可以使用其他进程管理软件替代，例如 [Monit](https://mmonit.com/monit/)。
+:::
 
 ### 服务
 
@@ -45,7 +54,7 @@ OnChat 虽然支持文件本地存储功能，但推荐使用第三方对象存�
   git clone https://github.com/HyperLife1119/OnChat
   ```
 
-1. 导航至 OnChat 后端应用程序项目根目录下并打开终端/控制台窗口，输入如下命令以安装项目所需依赖项：
+1. 导航至 OnChat 后端应用程序项目根目录下，输入如下命令以安装项目所需依赖项：
 
   ```bash
   composer install
