@@ -4,85 +4,51 @@ sidebar_position: 2
 
 # 配置
 
-Let's translate `docs/intro.md` to French.
+本指南主要介绍了如何配置 OnChat 前端应用程序。
 
-## Configure i18n
+## 反向代理配置
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+1. 进入 OnChat 前端应用程序根目录，打开 `proxy.config.json` 配置文件。
+1. 假设你的 OnChat 后端应用程序端口为 `9501` ，修改两处 `target` 选项值为 `http://localhost:9501`，示例：
 
-```js title="docusaurus.config.js"
-module.exports = {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
-
-## Translate a doc
-
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
-
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
-
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
-
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
-
-## Start your localized site
-
-Start your site on the French locale:
-
-```bash
-npm run start -- --locale fr
-```
-
-Your localized site is accessible at `http://localhost:3000/fr/` and the `Getting Started` page is translated.
-
-:::caution
-
-In development, you can only use one locale at a same time.
-
-:::
-
-## Add a Locale Dropdown
-
-To navigate seamlessly across languages, add a locale dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-module.exports = {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
+  ```json title="proxy.config.json"
+  {
+    "/onchat": {
+      "target": "http://localhost:9501",
+      "secure": "false",
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/onchat": ""
+      }
     },
-  },
-};
-```
+    "/ws": {
+      "target": "http://localhost:9501",
+      "secure": "false",
+      "ws": true,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/ws": ""
+      }
+    }
+  }
+  ```
 
-The locale dropdown now appears in your navbar:
+## 修改开发服务器端口
 
-![Locale Dropdown](/img/tutorial/localeDropdown.png)
+1. 进入 OnChat 前端应用程序根目录，打开 `package.json` 文件。
+1. 默认端口为 `4200`，假设你要将端口修改为 `6300`，请修改如下内容：
 
-## Build your localized site
-
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
+```diff title="package.json"
+  {
+    ...
+    "scripts": {
+      ...
+-     "start": "ng serve --port=4200",
++     "start": "ng serve --port=6300",
+      ...
+    },
+    ...
+  }
 ```
