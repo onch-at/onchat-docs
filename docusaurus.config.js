@@ -82,7 +82,7 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} HyperGo!, Inc. Built with Docusaurus.`,
     },
     prism: {
-      additionalLanguages: ['php', 'ini'],
+      additionalLanguages: ['php', 'ini', 'nginx'],
     },
     hideableSidebar: true
   },
