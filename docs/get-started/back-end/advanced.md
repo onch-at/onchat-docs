@@ -8,9 +8,9 @@ sidebar_position: 4
 
 ## 自定义存储驱动
 
-如果需要自定义存储驱动，你的驱动类必须实现 `app\contract\StorageDriver` 接口，包含了以下方法：
+如果需要自定义存储驱动，你的驱动类必须实现 `app\contract\StorageDriver` 接口：
 
-```php
+```php title="app/contract/StorageDriver.php"
 interface StorageDriver
 {
   /**
@@ -73,13 +73,17 @@ interface StorageDriver
 }
 ```
 
-- `getRootPath` 方法用于获取相对于储存目录的根目录。
-- `save` 方法用于保存文件，其中 `data` 参数可以为二进制数据、纯文本数据、本地文件路径和 `\think\File`
-- `delete` 方法用于删除文件。
-- `exist` 方法用于判断文件是否存在。
-- `clear` 方法用于清理目录下冗余文件。
-- `getUrl` 方法用于获取URL。
-- `getThumbnailUrl` 方法获取缩略图URL。
+| 方法 | 描述 |
+| - | - |
+| `getRootPath`     | 用于获取相对于储存目录的根目录 |
+| `save`            | 用于保存文件，其中 `data` 参数可以为二进制数据、纯文本数据、本地文件路径和 `\think\File` |
+| `delete`          | 用于删除文件 |
+| `exist`           | 用于判断文件是否存在 |
+| `clear`           | 用于清理目录下冗余文件 |
+| `getUrl`          | 用于获取URL |
+| `getThumbnailUrl` | 获取缩略图URL |
+
+### 更新配置文件
 
 1. 假设你的自定义驱动类名为 `Custom` ，请修改 `config/storage.php` 配置文件，并添加以下配置：
 
@@ -104,4 +108,6 @@ interface StorageDriver
 + DRIVER = custom
 ```
 
-> 参考 `app/core/storage/driver/Local.php` 与 `app/core/storage/driver/Oss.php` 的实现。
+:::note
+参考 `app/core/storage/driver/Local.php` 与 `app/core/storage/driver/Oss.php` 的实现。
+:::

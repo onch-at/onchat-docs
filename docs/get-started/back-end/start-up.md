@@ -11,7 +11,7 @@ sidebar_position: 3
 在终端/控制台窗口运行 `php think` 以查看所有命令，你也可以使用：
 
 ```bash
-php think onchat start|init
+php think onchat [start|init]
 ```
 
 ### 基本用法
@@ -30,7 +30,7 @@ php think onchat [<动作>]
 
 ## 运行
 
-1. 导航至 OnChat 后端应用程序项目根目录下并打开终端/控制台窗口。
+1. 打开终端/控制台窗口并导航至 OnChat 后端应用程序项目根目录下。
 1. 如果是首次运行，你需要先执行 `php think onchat init` 命令以初始化 OnChat。
 1. 执行 `php think onchat` 命令， 启动 OnChat 应用程序。
 1. 打开当前系统的 Web 浏览器，并访问 `http://127.0.0.1:9501` 。

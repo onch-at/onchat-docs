@@ -8,8 +8,8 @@ sidebar_position: 3
 
 ## 运行开发服务器
 
-1. 确保后端应用程序已成功运行。
-1. 打开终端/控制台窗口，导航至 OnChat 前端应用程序根目录，输入如下命令：
+1. 确保 OnChat 后端应用程序成功运行并处于运行状态。
+1. 打开终端/控制台窗口并导航至 OnChat 前端应用程序根目录，输入如下命令：
 
   ```bash
   npm run start
@@ -23,7 +23,7 @@ sidebar_position: 3
 
 ## 构建
 
-打开终端/控制台窗口，导航至 OnChat 前端应用程序根目录，输入如下命令：
+打开终端/控制台窗口并导航至 OnChat 前端应用程序根目录，输入如下命令：
 
 ```bash
 npm run build
@@ -40,7 +40,7 @@ npm run build
 :::
 
 :::note
-以下配置仅适用于 Nginx。教程中 HTTP 服务器将以 Nginx 为例。
+以下配置仅适用于 Nginx，教程中 HTTP 服务器将以 Nginx 为例。
 :::
 
 ```nginx
@@ -53,18 +53,20 @@ location / {
 location /onchat/ {
   proxy_pass http://127.0.0.1:9501/;
 
-  proxy_set_header x-forwarded-host $host;
+  proxy_set_header X-Forwarded-Host $host;
   proxy_set_header X-Real-IP $remote_addr;
-  proxy_set_header REMOTE-HOST $remote_addr;
+  proxy_set_header Remote-Host $remote_addr;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
-  proxy_redirect  off;
+  proxy_redirect off;
 }
 
 # 反向代理 WebSocket
 location /ws/ {
   proxy_pass http://127.0.0.1:9501/;
+
   proxy_http_version 1.1;
+
   proxy_set_header Upgrade $http_upgrade;
   proxy_set_header Connection 'Upgrade';
 }

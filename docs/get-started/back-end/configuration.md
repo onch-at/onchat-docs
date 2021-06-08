@@ -96,17 +96,16 @@ PASSWORD = SMTPPassword
 
 ## 阿里云对象存储服务（OSS）配置
 
-对于 `阿里云对象存储服务（OSS）`，这是一项可选服务。
+阿里云对象存储服务（OSS）是一项可选服务。
 
 ### 前置步骤
 
-访问[阿里云对象存储服务管理控制台](https://oss.console.aliyun.com/)。
+访问[阿里云对象存储服务管理控制台](https://oss.console.aliyun.com/) 。
 
 ### 创建 Bucket
 
-1. 进入 [Buckit 列表](https://oss.console.aliyun.com/bucket) 页面。
-1. 点击 `创建 Buckit` 按钮以创建一个供 OnChat 使用的 Buckit。
-1. 创建完毕后，在 Buckit 列表中找到并点击刚刚创建的 Buckit，进入 Buckit 管理页面。
+1. 进入 [Buckit 列表](https://oss.console.aliyun.com/bucket) 页面，并创建一个供 OnChat 使用的 Buckit。
+1. 创建完成后，在 Buckit 列表中找到并点击刚刚创建的 Buckit，进入 Buckit 管理页面。
 
 :::tip
 创建 Buckit 时，`存储类型` 推荐选择 `标准存储` ， `读写权限` 请选择 `私有` ，其他选项根据实际需要填写。
@@ -114,16 +113,9 @@ PASSWORD = SMTPPassword
 
 ### 添加缩略图样式
 
-1. 进入 Buckit 管理页面，点击 `数据处理` 按钮进入 Buckit 数据处理页面。
-1. 点击 `图片处理` 标签，进入 `数据处理-图片处理` 管理页面。
-1. 点击 `新建样式` 按钮，根据实际需求自定义缩略图样式。你还可以切换到高级编辑模式，使用以下代码快速创建一个基本的缩略图样式：
+1. 进入 Buckit 数据处理页面并切换到 `图片处理` 管理页。
+1. 新建一个图片样式，根据实际需求自定义缩略图样式。你还可以切换到高级编辑模式，使用以下代码快速创建一个基本的缩略图样式：
 
   ```txt
   image/quality,q_20/format,webp
   ```
-
-### 绑定域名（可选）
-
-1. 进入 Buckit 管理页面，点击 `传输管理` 按钮进入 Buckit 传输管理页面。
-1. 点击 `域名管理` 标签，进入 `传输管理-域名管理` 页面。
-1. 点击 `绑定域名` 按钮，根据实际情况自行绑定域名。

@@ -17,16 +17,16 @@ sidebar_position: 1
 - [Mkcert](https://github.com/FiloSottile/mkcert) 版本 当前版。Mkcert 是一个用于制作可信任的本地SSL证书（可选）。
 
 :::tip
-对于 `Nginx` ，这是一个可替换软件。你可以使用其他Web服务器软件替代，例如 [Apache](https://httpd.apache.org/) 。
+对于 Nginx ，这是一个可替换软件，你可以使用其他Web服务器软件替代，例如 [Apache](https://httpd.apache.org/) 。
 :::
 
 :::tip
-对于 `Mkcert` ，这是一个可选软件。仅在本地开发环境下需要使用。
+对于 Mkcert ，这是一个可选软件，仅在本地开发环境下需要使用。
 :::
 
 ## 安装 OnChat
 
-1. 以使用 GIT 工具克隆 OnChat 前端仓库到本地，请打开终端/控制台窗口，输入如下命令：
+1. 你可以使用 GIT 工具克隆 OnChat 前端仓库到本地，请在终端/控制台窗口输入如下命令：
 
   ```bash
   git clone https://github.com/HyperLife1119/OnChat-Web
@@ -38,7 +38,7 @@ sidebar_position: 1
   npm install
   ```
 
-1. 如果是本地开发环境，输入如下命令以生成可信任的本地SSL证书：
+1. 如果是本地开发环境，还需要输入如下命令以生成可信任的本地SSL证书：
 
   ```bash
   mkcert localhost

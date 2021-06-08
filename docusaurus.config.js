@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'OnChat',
-  tagline: '一个简单，美观，移动优先的即时通讯渐进式Web应用程序',
+  tagline: '一个简单，美观，移动优先的即时通讯渐进式 Web 应用程序',
   url: 'https://docs.chat.hypergo.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
