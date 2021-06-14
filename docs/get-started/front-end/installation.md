@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 安装
 
-本指南主要介绍了如何安装 OnChat 前端应用程序。
+本指南主要介绍了如何安装 OnChat 客户端应用程序。
 
 ## 先决条件
 
@@ -26,13 +26,13 @@ sidebar_position: 1
 
 ## 安装 OnChat
 
-1. 你可以使用 GIT 工具克隆 OnChat 前端仓库到本地，请在终端/控制台窗口输入如下命令：
+1. 你可以使用 GIT 工具克隆 OnChat 客户端仓库到本地，请在终端/控制台窗口输入如下命令：
 
   ```bash
   git clone https://github.com/HyperLife1119/OnChat-Web
   ```
 
-1. 导航至 OnChat 前端应用程序项目根目录下，输入如下命令以安装项目所需依赖项：
+1. 导航至 OnChat 客户端应用程序项目根目录下，输入如下命令以安装项目所需依赖项：
 
   ```bash
   npm install
