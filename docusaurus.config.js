@@ -60,8 +60,8 @@ module.exports = {
               href: 'https://discordapp.com/invite/docusaurus',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Sumicode',
+              href: 'https://www.sumicode.com/',
             },
           ],
         },

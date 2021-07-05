@@ -17,16 +17,22 @@ php think onchat [start|init]
 ### 基本用法
 
 ```bash
-php think onchat [<动作>]
+php think onchat [<动作>] [<选项>]
 ```
 
 ### 命令参数
 
 | 动作 | 示例 | 描述 |
 | - | - | - |
-|         | `php think onchat`         | 启动 OnChat 应用程序 |
-| start   | `php think onchat start`   | 启动 OnChat 应用程序 |
-| init    | `php think onchat init`    | 初始化 OnChat 应用程序 |
+|       | `php think onchat`       | 启动 OnChat 应用程序 |
+| start | `php think onchat start` | 启动 OnChat 应用程序 |
+| init  | `php think onchat init`  | 初始化 OnChat 应用程序 |
+
+### 命令选项
+
+| 选项 | 示例 | 描述 |
+| - | - | - |
+| env | `php think onchat --env=prod` | 指定环境变量文件名后缀 |
 
 ## 运行
 

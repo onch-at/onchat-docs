@@ -24,7 +24,7 @@ OnChat 是一个简单，美观，移动优先的即时通讯渐进式 Web 应�
 
 ## 支持
 
-OnChat 主要包含以下两个代码仓库：
+OnChat 主要包含以下代码仓库：
 
 <!-- <span class="dp-flex align-center"></span> -->
 
