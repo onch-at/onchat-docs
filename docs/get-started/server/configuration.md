@@ -6,6 +6,19 @@ sidebar_position: 2
 
 本指南主要介绍了如何配置 OnChat 服务端应用程序。
 
+## 生成 `RS256` 公私钥
+
+打开终端/控制台窗口并导航至 OnChat 服务端应用程序根目录，输入如下命令以生成 `RS256` 公私钥：
+
+```bash
+openssl genrsa -out private-key.pem
+openssl rsa -in private-key.pem -pubout -out public-key.pem
+```
+
+命令执行完成后，将在应用程序根目录下生成两个密钥文件，它们分别是 `private-key.pem` 与 `public-key.pem` 。
+
+OnChat 将使用上面生成的 `RS256` 公私钥进行访问令牌（JWT）的颁发。
+
 ## 环境变量配置
 
 OnChat 默认将**部分**主要的配置项抽离至到环境变量文件中配置，完整的配置请前往项目根目录下的 `config` 目录下查看。请根据实际情况修改对应的环境变量值。

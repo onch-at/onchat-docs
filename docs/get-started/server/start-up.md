@@ -32,7 +32,7 @@ php think onchat [<动作>] [<选项>]
 
 | 选项 | 示例 | 描述 |
 | - | - | - |
-| env | `php think onchat --env=prod` | 指定环境变量文件名后缀 |
+| env | `php think onchat -E prod` | 指定环境变量文件名后缀 |
 
 ## 运行
 

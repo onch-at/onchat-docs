@@ -21,6 +21,7 @@ sidebar_position: 1
 - [Redis](https://redis.io/) 版本 >=5.0.0（使用 `redis-cli -v` 查看版本）。Redis 是一个开源的内存数据结构存储，用作数据库，缓存和消息代理。
 - [FFmpeg](https://www.ffmpeg.org/) 版本 当前版（使用 `ffmpeg -version` 查看版本）。FFmpeg 是一个用于处理多媒体内容的库和工具的集合。
 - [Supervisor](http://supervisord.org/) 版本 当前版（使用 `supervisorctl version` 查看版本）。Supervisor 是一个进程控制系统。
+- [OpenSSL](https://www.openssl.org/) 版本 当前版（使用 `openssl version` 查看版本）。OpenSSL 是用于传输层安全性 (TLS) 和安全套接字层 (SSL) 协议的强大、商业级和功能齐全的工具包。
 
 :::caution
 对于 Swoole，需要开启 `SWOOLE_HOOK_NATIVE_CURL`（使用 `php --ri swoole | grep curl-native` 查看是否开启）。若未开启，你需要重新编译 Swoole，编译时需开启 `--enable-swoole-curl` 选项，详见 [Swoole 文档 »](https://wiki.swoole.com/#/runtime?id=swoole_hook_native_curl) 。

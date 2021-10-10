@@ -69,12 +69,12 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'OnChat',
+              href: 'https://chat.hypergo.net',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/HyperLife1119',
             },
           ],
         },
