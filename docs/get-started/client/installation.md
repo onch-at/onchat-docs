@@ -17,10 +17,7 @@ sidebar_position: 1
 - [Mkcert](https://github.com/FiloSottile/mkcert) 版本 当前版。Mkcert 是一个用于制作可信任的本地SSL证书（可选）。
 
 :::tip
-对于 Nginx ，这是一个可替换软件，你可以使用其他Web服务器软件替代，例如 [Apache](https://httpd.apache.org/) 。
-:::
-
-:::tip
+对于 Nginx ，这是一个可替换软件。你可以使用其他Web服务器软件替代，例如 [Apache](https://httpd.apache.org/) 。<br />
 对于 Mkcert ，这是一个可选软件，仅在本地开发环境下需要使用。
 :::
 
@@ -38,7 +35,7 @@ sidebar_position: 1
   npm install
   ```
 
-1. 如果是本地开发环境，还需要输入如下命令以生成可信任的本地SSL证书：
+1. 如果是本地开发环境，还需要输入如下命令以生成可信任的本地 SSL 证书：
 
   ```bash
   mkcert localhost

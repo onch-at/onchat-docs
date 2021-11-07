@@ -28,7 +28,8 @@ sidebar_position: 1
 :::
 
 :::tip
-对于 Supervisor，这是一个可替换软件，你可以使用其他进程管理软件替代，例如 [Monit](https://mmonit.com/monit/) 。
+对于 Supervisor，这是一个可替换软件。你可以使用其他进程管理软件替代，例如 [Monit](https://mmonit.com/monit/) 。<br />
+对于 OpenSSL，这是一个可替换软件。主要用来生成 `RS256` 公私钥，你可以使用其他 `RS256` 公私钥生成软件替代。
 :::
 
 ### 服务

@@ -44,11 +44,6 @@ npm run build
 :::
 
 ```nginx
-map $http_upgrade $connection_upgrade {
-    default upgrade;
-    ''      close;
-}
-
 server {
   # ...
 
@@ -57,37 +52,15 @@ server {
     try_files $uri $uri/ /index.html;
   }
 
-  # HTTP 反向代理
+  # 反向代理
   location /onchat/ {
     proxy_pass http://127.0.0.1:9501/;
     proxy_http_version 1.1;
-    proxy_set_header Connection "";
     proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Real-PORT $remote_port;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;
-    proxy_set_header Scheme $scheme;
-    proxy_set_header Server-Protocol $server_protocol;
-    proxy_set_header Server-Name $server_name;
-    proxy_set_header Server-Addr $server_addr;
-    proxy_set_header Server-Port $server_port;
-  }
-
-  # WebSocket 反向代理
-  location /ws/ {
-    proxy_pass http://127.0.0.1:9501/;
-    proxy_http_version 1.1;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Real-PORT $remote_port;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header Host $http_host;
-    proxy_set_header Scheme $scheme;
-    proxy_set_header Server-Protocol $server_protocol;
-    proxy_set_header Server-Name $server_name;
-    proxy_set_header Server-Addr $server_addr;
-    proxy_set_header Server-Port $server_port;
     proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection $connection_upgrade;
+    proxy_set_header Connection "upgrade";
   }
 }
 ```

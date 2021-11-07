@@ -104,7 +104,7 @@ interface StorageDriver
 
 ```diff title=".env"
   [STORAGE]
-- DRIVER = oss
+- DRIVER = local
 + DRIVER = custom
 ```
 
