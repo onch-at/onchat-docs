@@ -6,6 +6,8 @@ sidebar_position: 1
 
 OnChat 是一个简单，美观，移动优先的即时通讯渐进式 Web 应用程序。
 
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+
 目前 OnChat 支持以下聊天方式：
 
 - 文字消息
@@ -25,7 +27,7 @@ OnChat 是一个简单，美观，移动优先的即时通讯渐进式 Web 应�
 
 ## 快速体验
 
-访问 [OnChat](https://chat.hypergo.net) 官方站点，快速开始你的在线社交聊天之旅。
+访问 OnChat 官方站点：[https://chat.hypergo.net](https://chat.hypergo.net)，快速开始你的在线社交聊天之旅。
 
 ## 计划
 
