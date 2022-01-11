@@ -12,7 +12,7 @@ sidebar_position: 1
 
 ### 软件与环境
 
-- [PHP](https://www.php.net/) 版本 >=7.1.0（使用 `php -v` 查看版本）。PHP 是一种流行的通用脚本语言，特别适合于 Web 开发。
+- [PHP](https://www.php.net/) 版本 >=7.4.0（使用 `php -v` 查看版本）。PHP 是一种流行的通用脚本语言，特别适合于 Web 开发。
 - [Composer](https://getcomposer.org/) 版本 >= 2.0.0（使用 `composer -V` 查看版本）。Composer 是 PHP 的依赖管理器。
 - [Swoole](https://www.swoole.com/) 版本 >=4.6.0（使用 `php --ri swoole` 查看版本）。Swoole 是一个 PHP 的协程框架，提供了基于协程的并发库。
 - [PhpRedis](https://github.com/phpredis/phpredis) 版本 当前版（使用 `php --ri redis` 查看版本）。PhpRedis 是一个 PHP 扩展，提供了用于与 Redis 进行通信的 API。
